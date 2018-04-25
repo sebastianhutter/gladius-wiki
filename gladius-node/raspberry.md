@@ -85,7 +85,7 @@ After the installation we need to change the default nodejs paths so we dont nee
 mkdir ~/.npm-global
 npm config set prefix '~/.npm-global'
 echo "PATH=~/.npm-global/bin:$PATH" >> ~/.bashrc
-source .bashrc
+source ~/.bashrc
 ```
 
 #### install other requirements
