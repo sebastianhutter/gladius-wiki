@@ -5,7 +5,7 @@ The monitored device is based on a native raspberry pi installation - documented
 
 ## Setup Datadog
 Datadog is a monitoring as a service solution. It provides different agents to integrate all common operating systems.
-The cool thing is that you can monitor up to 5 nodes for free. Therefore, datadog is a very good fit for the beta testers.
+The cool thing is that you can monitor up to 5 nodes for free. Therefore, datadog is a very good fit for the beta testers. 
 
 ### Create a datadog account
 First you need to go to the [datadog homepage](https://www.datadoghq.com/) and create an account.
@@ -94,6 +94,8 @@ The dashboard we create will show cpu / memory usage of the gladius processes, b
 - Add Timeseries
   - system.processes.mem.pct - host:raspberry, gladius-control
   - system.processes.mem.pct - host:raspberry, gladius-edge
+
+And thats it. You know have a small dashboard with the most important metrics.
 
 ## Next steps
 Datadog provides a lot more functionality the we used in this document. 
