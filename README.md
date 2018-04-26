@@ -16,7 +16,7 @@ Gladius’ goal is to create a fully decentralized, peer to peer, serverless nod
 
 ### Gladius Edge Node examples
 #### [Setup with Raspberry PI](./gladius-node/raspberry.md)
-#### [Monitoring with datadog](./gladius-node/datadog.md)
+#### [Monitoring with datadog on Debian](./gladius-node/datadog-debian.md)
 
 ### Managing A Pool (Not implemented)
 
