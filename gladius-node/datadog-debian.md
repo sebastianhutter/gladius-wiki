@@ -1,7 +1,7 @@
 # monitoring with datadog
 ## intro
 This document shows how to integrate a gladius node into datadog.
-The monitored device is based on a native raspberry pi installation - documented [here](./raspberry.md).
+The document assumes that you are running a debian based distribution.
 
 ## Setup Datadog
 Datadog is a monitoring as a service solution. It provides different agents to integrate all common operating systems.
@@ -11,7 +11,7 @@ The cool thing is that you can monitor up to 5 nodes for free. Therefore, datado
 First you need to go to the [datadog homepage](https://www.datadoghq.com/) and create an account.
 
 ### Install the debian agent
-Raspbian is a debian based distribution. This allows us to install the debian agent on the pi.
+This allows us to install the debian agent on the pi.
 Every datadog agent installation needs a `datadog api key` set to work. This api key is different for every datadog account.
 
 Navigate to the [debian agents page](https://app.datadoghq.com/account/settings#agent/debian) to get the comamnd to install the agent with your api key. 
@@ -80,20 +80,20 @@ The dashboard we create will show cpu / memory usage of the gladius processes, b
 - Navigate to the [dashbord lists](https://app.datadoghq.com/dashboard/lists) and hit 'New Dashboard'.
 - Choose 'New TimeBoard'
 - Add Timeseries
-  - system.load.1 - host:raspberry
+  - system.load.1 - host:myhost
 - Add Timeseries
-  - system.mem.free - host:raspberry
-  - system.mem.used - host:raspberry
-  - system.swap.used - host:raspberry
+  - system.mem.free - host:myhost
+  - system.mem.used - host:myhost
+  - system.swap.used - host:myhost
 - Add Timeseries
-  - system.net.bytes_rcvd - host:raspberry
-  - system.net.bytes_sent - host:raspberry
+  - system.net.bytes_rcvd - host:myhost
+  - system.net.bytes_sent - host:myhost
 - Add Timeseries
-  - system.processes.cpu.pct - host:raspberry, gladius-control
-  - system.processes.cpu.pct - host:raspberry, gladius-edge
+  - system.processes.cpu.pct - host:myhost, gladius-control
+  - system.processes.cpu.pct - host:myhost, gladius-edge
 - Add Timeseries
-  - system.processes.mem.pct - host:raspberry, gladius-control
-  - system.processes.mem.pct - host:raspberry, gladius-edge
+  - system.processes.mem.pct - host:myhost, gladius-control
+  - system.processes.mem.pct - host:myhost, gladius-edge
 
 And thats it. You know have a small dashboard with the most important metrics.
 
